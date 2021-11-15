@@ -1,13 +1,16 @@
 {
   "name": "@codewithkyle/uuid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight web-based UUID utility functions.",
-  "main": "uuid.min.mjs",
+  "main": "uuid.js",
   "files": [
     "uuid.d.ts",
     "uuid.min.js",
-    "uuid.min.mjs"
+    "uuid.min.mjs",
+    "uuid.js"
   ],
+  "type": "module",
+  "types": "uuid.d.ts",
   "scripts": {
     "build": "tsc && esbuild ./src/uuid.ts --outfile=uuid.min.js --format=iife --minify-whitespace --global-name=GUID && esbuild ./src/uuid.ts --outfile=uuid.min.mjs --format=esm --minify",
     "test": "npm run build && cp ./uuid.min.js ./test && cp ./uuid.min.mjs ./test && serve ./test"
