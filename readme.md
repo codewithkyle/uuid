@@ -1,6 +1,6 @@
 # UUID
 
-Lightweight web-based UUID utility functions.
+Lightweight (500 byte) web-based UUID utility functions.
 
 - native UUID v4 support
 - UTC time ordered UUIDs
