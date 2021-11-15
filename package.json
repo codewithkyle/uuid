@@ -1,0 +1,30 @@
+{
+  "name": "@codewithkyle/uuid",
+  "version": "1.0.0",
+  "description": "Lightweight web-based UUID utility functions.",
+  "main": "uuid.min.mjs",
+  "files": [
+    "uuid.d.ts",
+    "uuid.min.js",
+    "uuid.min.mjs"
+  ],
+  "scripts": {
+    "build": "tsc && esbuild ./src/uuid.ts --outfile=uuid.min.js --format=iife --minify-whitespace --global-name=GUID && esbuild ./src/uuid.ts --outfile=uuid.min.mjs --format=esm --minify",
+    "test": "npm run build && cp ./uuid.min.js ./test && cp ./uuid.min.mjs ./test && serve ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithkyle/uuid.git"
+  },
+  "author": "Kyle Andrews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codewithkyle/uuid/issues"
+  },
+  "homepage": "https://github.com/codewithkyle/uuid#readme",
+  "devDependencies": {
+    "esbuild": "^0.13.13",
+    "serve": "^13.0.2",
+    "typescript": "^4.4.4"
+  }
+}

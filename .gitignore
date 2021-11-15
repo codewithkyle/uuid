@@ -1,0 +1,5 @@
+node_modules
+uuid.js
+uuid.min.js
+uuid.min.mjs
+uuid.d.ts
